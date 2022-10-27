@@ -50,6 +50,9 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void addCity(City city){
+        if (cities.contains(city)) {
+            throw new IllegalArgumentException();
+        }
         cities.add(city);
     }
 
@@ -61,6 +64,9 @@ public class CustomList extends ArrayAdapter<City> {
         if(cities.contains(city)){
             cities.remove(city);
         }
+    }
+
+    public int countCities(){
     }
 
 

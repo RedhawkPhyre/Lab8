@@ -52,7 +52,12 @@ public class CustomListTest {
         listSize = list.getCount();
         list.deleteCity(city);
         assertEquals(list.getCount(),listSize - 1);
+    }
 
+    @Test
+    public void countCitiesTest(){
+        list = MockCityList();
+        assertEquals(list.countCities(), list.getCount());
     }
 
 }
